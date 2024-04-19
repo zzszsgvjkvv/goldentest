@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "964650887157",
+    "project_id": "goldensoft-54e2c",
+    "storage_bucket": "goldensoft-54e2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964650887157:android:8d47667951e08ded2f22bc",
+        "android_client_info": {
+          "package_name": "com.example.goldesofttest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB35OkRh1pnfWzrLDsEg74AMEgetAF6Yuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
