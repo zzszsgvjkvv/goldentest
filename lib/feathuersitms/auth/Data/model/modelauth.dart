@@ -1,7 +1,7 @@
 import 'package:goldesofttest/feathuersitms/auth/Domain/entites/authentites.dart';
 
 class Modelauth extends Entitesampleauth {
-  Modelauth(
+  const Modelauth(
       {required super.name,
       required super.email,
       required super.password,

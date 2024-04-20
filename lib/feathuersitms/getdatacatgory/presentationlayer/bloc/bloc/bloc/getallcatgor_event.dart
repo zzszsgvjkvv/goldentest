@@ -15,5 +15,5 @@ class Gettallcatgor extends GetallcatgorEvent {
 class RefrGettallcatg extends GetallcatgorEvent {
  final int id;
 
- RefrGettallcatg({required this.id}); 
+ const RefrGettallcatg({required this.id}); 
 }

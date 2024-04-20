@@ -13,7 +13,7 @@ class Entitesampleauth extends Equatable {
       code;
   final int iban, phone;
 
-  Entitesampleauth({required this.name, required this.email, required this.password, required this.city, required this.latitude, required this.longitude, required this.residency_photo, required this.bank_name, required this.sub_categories, required this.code, required this.iban, required this.phone});
+  const Entitesampleauth({required this.name, required this.email, required this.password, required this.city, required this.latitude, required this.longitude, required this.residency_photo, required this.bank_name, required this.sub_categories, required this.code, required this.iban, required this.phone});
 
 
 

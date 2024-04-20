@@ -20,14 +20,14 @@ class _MySettingspageState extends State<MySettingspage> {
           title: Text(AppLocalizatons.of(context)!.translate('titleSettings')),
         ),
         body: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: ListView(children: [
             const SizedBox(
               height: 20,
             ),
             Text(
               AppLocalizatons.of(context)!.translate('select you language'),
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              style: const TextStyle(fontSize: 20, color: Colors.white),
             ),
             BlocBuilder<LanguagechangeCubit, LanguagechangeState>(
                 builder: (context, state) {
@@ -58,7 +58,7 @@ class _MySettingspageState extends State<MySettingspage> {
             }),
             Text(
               AppLocalizatons.of(context)!.translate('select you them'),
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              style: const TextStyle(fontSize: 20, color: Colors.white),
             ),
           ]),
         ));

@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (_) => di.sl<GetallcatgorBloc>()..add(Gettallcatgor()),
+            create: (_) => di.sl<GetallcatgorBloc>()..add(const Gettallcatgor()),
           ),
           BlocProvider(
               create: (context) => LanguagechangeCubit()..getsavelanguagecod())

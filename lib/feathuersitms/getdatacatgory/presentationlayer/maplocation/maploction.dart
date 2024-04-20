@@ -18,11 +18,11 @@ Future<Position> _determinePosition(BuildContext context) async {
     // accessing the position and request users of the
     // App to enable the location services.
     ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Location services are disabled")));
+        const SnackBar(content: Text("Location services are disabled")));
     return Future.error('Location services are disabled.');
   }
   ScaffoldMessenger.of(context)
-      .showSnackBar(SnackBar(content: Text("Location services are enabled")));
+      .showSnackBar(const SnackBar(content: Text("Location services are enabled")));
   permission = await Geolocator.checkPermission();
   if (permission == LocationPermission.denied) {
     permission = await Geolocator.requestPermission();
@@ -33,7 +33,7 @@ Future<Position> _determinePosition(BuildContext context) async {
       // returned true. According to Android guidelines
       // your App should show an explanatory UI now.
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Location services are disabled")));
+          const SnackBar(content: Text("Location services are disabled")));
       return Future.error('Location permissions are denied');
     }
   }
@@ -67,23 +67,24 @@ class _MaploctionState extends State<Maploction> {
 
   static const LatLng _pgoogleplex = LatLng(48.119168, 53.735165);
   GoogleMapController? gmc;
-  late final Marker _marker;
+ Marker _marker=const Marker(
+                            markerId: MarkerId("1"), position: LatLng(48.119168, 53.735165));
 
   @override
   Widget build(BuildContext context) {
   
     return Scaffold(
-      body:Container(
+      body:SizedBox(
         width: double.infinity,
         height:700,
        
           child: Column(
             children: [
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               TextButton(onPressed: (){
         Navigator.pop(context);
-              }, child: Text("back", style: TextStyle(fontSize: 20,color: Colors.white),)),
-             SizedBox(height: 20,),
+              }, child: const Text("back", style: TextStyle(fontSize: 20,color: Colors.white),)),
+             const SizedBox(height: 20,),
               SizedBox(
              width: double.infinity,
         height: 400,
@@ -92,14 +93,16 @@ class _MaploctionState extends State<Maploction> {
                     GoogleMap(
                       onTap: (argument) {
                         _marker = Marker(
-                            markerId: MarkerId("value"),
+                            markerId: const MarkerId("1"),
                             position: LatLng(argument.latitude, argument.longitude));
                widget.location( _marker.position.latitude,
                   _marker.position.latitude);
+                  setState(() {
+                    
+                  });
                       },
                       markers: {
-                        const Marker(
-                            markerId: MarkerId("1"), position: LatLng(48.119168, 53.735165))
+                    _marker
                       },
                       initialCameraPosition:
                           const CameraPosition(target: _pgoogleplex, zoom: 0.0),

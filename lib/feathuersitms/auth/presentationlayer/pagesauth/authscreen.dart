@@ -150,7 +150,7 @@ class _AuthScreenState extends State<AuthScreen> {
         };
 
        print(map);
-        var reqest = await http.MultipartRequest(
+        var reqest = http.MultipartRequest(
           'POST',
           Uri.parse(url),
         );
@@ -193,7 +193,7 @@ class _AuthScreenState extends State<AuthScreen> {
       );
     }
 
-    Widget _buildbody(BuildContext context) {
+    Widget buildbody(BuildContext context) {
       return Center(
           child: Card(
               elevation: 10,
@@ -351,7 +351,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                     }),
                                 const SizedBox(height: 20),
                                
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                          
@@ -369,7 +369,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                               },),
                                           ));
                                     },
-                                    child: Text("تحديد الموقع على الخريطة")),
+                                    child: const Text("تحديد الموقع على الخريطة")),
                                 BlocBuilder<GetallcatgorBloc,
                                 GetallcatgorState>(
                                  builder: (context, state) {
@@ -398,7 +398,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                         ),
                                       );
                                     } else {
-                                      return SizedBox();
+                                      return const SizedBox();
                                     }
                                   },
                                 )
@@ -407,7 +407,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
     return SafeArea(
         child: Scaffold(
-      body: _buildbody(context),
+      body: buildbody(context),
     ));
   }
 }

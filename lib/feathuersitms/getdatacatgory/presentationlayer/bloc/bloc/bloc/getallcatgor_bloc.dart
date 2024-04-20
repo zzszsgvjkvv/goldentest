@@ -65,7 +65,7 @@ List<Entitesample> subdatasorfail(Either<Failuer, List<Entitesample>>subdatas){
       return Errorgetmealstate(mesg: _mesgfailure(failuer));
     }, (listdatacatgory) {
      
-      return Lodedgstate(modeldata: listdatacatgory, submodeldata:subdatasorfail(subdatasorfal), aded: []);
+      return Lodedgstate(modeldata: listdatacatgory, submodeldata:subdatasorfail(subdatasorfal), aded: const []);
     });
   }
   
